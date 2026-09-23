@@ -24,7 +24,7 @@ jobs:
       - name: Setup Repo and Clone GKI 5.10
         run: |
           mkdir android-kernel && cd android-kernel
-          repo init -u https://android.googlesource.com/kernel/manifest -b common-android12-5.10 --depth=1
+          repo init -u https://android.googlesource.com/kernel/manifest -b common-android15-lts --depth=1
           repo sync -c -j$(nproc --all) --no-tags --no-clone-bundle
 
       - name: Integrate KernelSU-Next
